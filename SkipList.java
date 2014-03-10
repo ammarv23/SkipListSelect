@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.Random;
 
@@ -15,7 +16,7 @@ public class SkipList {
 	public int h; //height
 	public Random r; //coin toss
 
-	public static boolean helperPrintVal = true;
+	public static boolean helperPrintVal = false;
 
 	public SkipList(){
 
@@ -115,6 +116,7 @@ public class SkipList {
 		//Check if key is found
 
 		if (k.equals(p.key)){	//if key is found, we're done
+			if (helperPrintVal)
 			System.out.println("String found at position " + k + ".");
 			return false;
 		}
@@ -282,7 +284,7 @@ public class SkipList {
 
 		SkipListNode p = findEntry(k);
 		
-		helperPrint(p, "deleteStart", 0);
+		helperPrint(new SkipListNode(k), "deleteStart", 0);
 
 		//previous node to deleted node
 		SkipListNode q = p.left;
@@ -293,6 +295,7 @@ public class SkipList {
 		//if p is not in the list, we're done
 
 		if (!k.equals(p.key)){
+			if (helperPrintVal)
 			System.out.println("Key " + k + " not found, already removed.");
 			return false;
 		}
@@ -472,7 +475,7 @@ public class SkipList {
 			while (!s.insert(insString)){
 				insArray[i] = r.nextInt(100);
 				insString = Integer.toString(insArray[i]);
-				System.out.println("Inserting " + insString);
+				//System.out.println("Inserting " + insString);
 			}
 			if (b)
 			Printout.printout(s, "Horizontal");
@@ -484,7 +487,7 @@ public class SkipList {
 			String deleteString = Integer.toString(insArray[r.nextInt(ins - j - 1)]);
 			while(!s.delete(deleteString)){
 				deleteString = Integer.toString(insArray[r.nextInt(ins - j - 1)]);
-				System.out.println("Deleting " + deleteString);
+				//System.out.println("Deleting " + deleteString);
 			}
 			if (b)
 			Printout.printout(s, "Horizontal");
@@ -510,17 +513,26 @@ public class SkipList {
 
 	}
 
-	public static void main(String[] args)
+	public static void main(String[] args) throws IOException
 	{
-
-		int inserts = 5;		//number of inserted values
-		int deletions = 1;	//number of deletions
+		
+		System.out.println("Welcome to Ammar Vahanvaty's Skip List Program!");
+		System.out.print("Would you like to enter debug mode? (yes/no) ----> ");
+		int b = System.in.read();
+		if (b == 121){
+			helperPrintVal = true;
+		}
+		int inserts = 10;		//number of inserted values
+		int deletions = 5;	//number of deletions
 		int ranksDivider = 2;	// divider for ranks to ensure we don't ask for more ranks than we have nodes but still allows for variable ranks. There will always be at least 1
 		int x;
 
 		if (ranksDivider > (inserts - deletions)){
 			x = (ranksDivider % (inserts - deletions)) + 1;
 		}else x = ranksDivider;
+		
+		System.out.println("Creating SkipList with " + inserts + " insertions, " + deletions + " deletions and "
+					+ x + " ranks.");
 
 		SkipList s = new SkipList();
 
