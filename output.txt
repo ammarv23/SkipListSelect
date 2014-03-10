@@ -6,13 +6,20 @@ Max inputs = 10
 Max Deletions = 3
 Max ranks = 3
 
--oo <---------> 35 <---------> 51 <-------------------------> +oo
--oo <---------> 35 <-> 47 <-> 51 <---------> 88 <---------> +oo
--oo <-> 20 <-> 35 <-> 47 <-> 51 <-> 65 <-> 88 <-> 93 <-> +oo
--------
-The node at rank 2 is: "35"
-The node at rank 4 is: "51"
-The node at rank 6 is: "88"
+Welcome to Ammar Vahanvaty's Skip List Program!
+Would you like to enter debug mode? (yes/no) ----> no
+
+Creating SkipList with 10 insertions, 3 deletions and 3 ranks.
+================================
+-oo <-> 15 <-------------------------------------------------> +oo
+-oo <-> 15 <-------------------------------------------------> +oo
+-oo <-> 15 <-> 17 <-----------------------------------------> +oo
+-oo <-> 15 <-> 17 <-----------------> 46 <-> 48 <---------> +oo
+-oo <-> 15 <-> 17 <-> 19 <-> 34 <-> 46 <-> 48 <-> 5 <-> +oo
+============================
+The node at rank 4 is: "34"
+The node at rank 5 is: "46"
+The node at rank 6 is: "48"
 
 
 Sample output with test messages:
@@ -24,122 +31,166 @@ Max Deletions = 1
 Max ranks = 2
 
 
-Beginning insertion of key 80
+Welcome to Ammar Vahanvaty's Skip List Program!
+Would you like to enter debug mode? (yes/no) ----> yes
+
+Creating SkipList with 5 insertions, 1 deletions and 2 ranks.
+================================
+Beginning insertion of key 38
 ------------
-For node 80 on level 0 :
+For node 38 on level 0 :
 right pointer is 1 rank(s) away from next node.
 left pointer is 1 rank(s) away from previous node.
 ------------
-For node 80 on level 1 :
+For node 38 on level 1 :
 right pointer is 1 rank(s) away from next node.
 left pointer is 1 rank(s) away from previous node.
 ------------
-For top level node -oo to 80
-Right pointer of -oo is 1 rank(s) away from node 80
+For node 38 on level 2 :
+right pointer is 1 rank(s) away from next node.
+left pointer is 1 rank(s) away from previous node.
+------------
+For node 38 on level 3 :
+right pointer is 1 rank(s) away from next node.
+left pointer is 1 rank(s) away from previous node.
+------------
+For node 38 on level 4 :
+right pointer is 1 rank(s) away from next node.
+left pointer is 1 rank(s) away from previous node.
+------------
+For node 38 on level 5 :
+right pointer is 1 rank(s) away from next node.
+left pointer is 1 rank(s) away from previous node.
+------------
+For node 38 on level 6 :
+right pointer is 1 rank(s) away from next node.
+left pointer is 1 rank(s) away from previous node.
+------------
+For top level node -oo to 38
+Right pointer of -oo is 1 rank(s) away from node 38
 Left pointer of -oo is 0 rank(s) away from the previous node
-The height of the list is currently: 1
+The height of the list is currently: 6
 The number of elements in the list is: 1
 ------------
--oo <-> 80 <-> +oo
--oo <-> 80 <-> +oo
+-oo <-> 38 <-> +oo
+-oo <-> 38 <-> +oo
+-oo <-> 38 <-> +oo
+-oo <-> 38 <-> +oo
+-oo <-> 38 <-> +oo
+-oo <-> 38 <-> +oo
+-oo <-> 38 <-> +oo
 ============================
-Beginning insertion of key 72
+Beginning insertion of key 92
 ------------
-For node 72 on level 0 :
+For node 92 on level 0 :
 right pointer is 1 rank(s) away from next node.
 left pointer is 1 rank(s) away from previous node.
 ------------
-For node 72 on level 1 :
+For node 92 on level 1 :
 right pointer is 1 rank(s) away from next node.
 left pointer is 1 rank(s) away from previous node.
 ------------
-For top level node -oo to 72
-Right pointer of -oo is 1 rank(s) away from node 72
-Left pointer of -oo is 0 rank(s) away from the previous node
-The height of the list is currently: 1
+For top level node 38 to +oo
+Right pointer of 38 is 2 rank(s) away from node +oo
+Left pointer of 38 is 1 rank(s) away from the previous node
+The height of the list is currently: 6
 The number of elements in the list is: 2
 ------------
--oo <-> 72 <-> 80 <-> +oo
--oo <-> 72 <-> 80 <-> +oo
+-oo <-> 38 <---------> +oo
+-oo <-> 38 <---------> +oo
+-oo <-> 38 <---------> +oo
+-oo <-> 38 <---------> +oo
+-oo <-> 38 <---------> +oo
+-oo <-> 38 <-> 92 <-> +oo
+-oo <-> 38 <-> 92 <-> +oo
 ============================
-Beginning insertion of key 42
+Beginning insertion of key 93
 ------------
-For node 42 on level 0 :
+For node 93 on level 0 :
 right pointer is 1 rank(s) away from next node.
 left pointer is 1 rank(s) away from previous node.
 ------------
-For top level node -oo to 72
-Right pointer of -oo is 2 rank(s) away from node 72
-Left pointer of -oo is 0 rank(s) away from the previous node
-The height of the list is currently: 1
+For top level node 38 to +oo
+Right pointer of 38 is 3 rank(s) away from node +oo
+Left pointer of 38 is 1 rank(s) away from the previous node
+The height of the list is currently: 6
 The number of elements in the list is: 3
 ------------
--oo <---------> 72 <-> 80 <-> +oo
--oo <-> 42 <-> 72 <-> 80 <-> +oo
+-oo <-> 38 <-----------------> +oo
+-oo <-> 38 <-----------------> +oo
+-oo <-> 38 <-----------------> +oo
+-oo <-> 38 <-----------------> +oo
+-oo <-> 38 <-----------------> +oo
+-oo <-> 38 <-> 92 <---------> +oo
+-oo <-> 38 <-> 92 <-> 93 <-> +oo
 ============================
-Beginning insertion of key 69
+Beginning insertion of key 45
 ------------
-For node 69 on level 0 :
+For node 45 on level 0 :
 right pointer is 1 rank(s) away from next node.
 left pointer is 1 rank(s) away from previous node.
 ------------
-For node 69 on level 1 :
+For node 45 on level 1 :
 right pointer is 1 rank(s) away from next node.
-left pointer is 2 rank(s) away from previous node.
+left pointer is 1 rank(s) away from previous node.
 ------------
-For node 69 on level 2 :
-right pointer is 3 rank(s) away from next node.
-left pointer is 2 rank(s) away from previous node.
-------------
-For top level node -oo to 69
-Right pointer of -oo is 2 rank(s) away from node 69
-Left pointer of -oo is 0 rank(s) away from the previous node
-The height of the list is currently: 2
+For top level node 38 to +oo
+Right pointer of 38 is 4 rank(s) away from node +oo
+Left pointer of 38 is 1 rank(s) away from the previous node
+The height of the list is currently: 6
 The number of elements in the list is: 4
 ------------
--oo <---------> 69 <-----------------> +oo
--oo <---------> 69 <-> 72 <-> 80 <-> +oo
--oo <-> 42 <-> 69 <-> 72 <-> 80 <-> +oo
+-oo <-> 38 <-------------------------> +oo
+-oo <-> 38 <-------------------------> +oo
+-oo <-> 38 <-------------------------> +oo
+-oo <-> 38 <-------------------------> +oo
+-oo <-> 38 <-------------------------> +oo
+-oo <-> 38 <-> 45 <-> 92 <---------> +oo
+-oo <-> 38 <-> 45 <-> 92 <-> 93 <-> +oo
 ============================
-Beginning insertion of key 33
+Beginning insertion of key 54
 ------------
-For node 33 on level 0 :
+For node 54 on level 0 :
 right pointer is 1 rank(s) away from next node.
 left pointer is 1 rank(s) away from previous node.
 ------------
-For node 33 on level 1 :
-right pointer is 2 rank(s) away from next node.
+For node 54 on level 1 :
+right pointer is 1 rank(s) away from next node.
 left pointer is 1 rank(s) away from previous node.
 ------------
-For node 33 on level 2 :
-right pointer is 2 rank(s) away from next node.
-left pointer is 1 rank(s) away from previous node.
-------------
-For top level node -oo to 33
-Right pointer of -oo is 1 rank(s) away from node 33
-Left pointer of -oo is 0 rank(s) away from the previous node
-The height of the list is currently: 2
+For top level node 38 to +oo
+Right pointer of 38 is 5 rank(s) away from node +oo
+Left pointer of 38 is 1 rank(s) away from the previous node
+The height of the list is currently: 6
 The number of elements in the list is: 5
 ------------
--oo <-> 33 <---------> 69 <-----------------> +oo
--oo <-> 33 <---------> 69 <-> 72 <-> 80 <-> +oo
--oo <-> 33 <-> 42 <-> 69 <-> 72 <-> 80 <-> +oo
+-oo <-> 38 <---------------------------------> +oo
+-oo <-> 38 <---------------------------------> +oo
+-oo <-> 38 <---------------------------------> +oo
+-oo <-> 38 <---------------------------------> +oo
+-oo <-> 38 <---------------------------------> +oo
+-oo <-> 38 <-> 45 <-> 54 <-> 92 <---------> +oo
+-oo <-> 38 <-> 45 <-> 54 <-> 92 <-> 93 <-> +oo
 ============================
-Beginning deletion of key 42
+Beginning deletion of key 93
 ------------
-For node 42:
+For node 93:
 Deletion at level 0
-Rank difference between nodes "33" and "69" now 1
+Rank difference between nodes "92" and "+oo" now 1
 ------------
-Deletion cascading up from level 1 to 2
+Deletion cascading up from level 1 to 6
 ------------
 Deletion ended
-The height of the list is currently: 2
+The height of the list is currently: 6
 The number of elements in the list is: 4
 ------------
--oo <-> 33 <-> 69 <-----------------> +oo
--oo <-> 33 <-> 69 <-> 72 <-> 80 <-> +oo
--oo <-> 33 <-> 69 <-> 72 <-> 80 <-> +oo
+-oo <-> 38 <-------------------------> +oo
+-oo <-> 38 <-------------------------> +oo
+-oo <-> 38 <-------------------------> +oo
+-oo <-> 38 <-------------------------> +oo
+-oo <-> 38 <-------------------------> +oo
+-oo <-> 38 <-> 45 <-> 54 <-> 92 <-> +oo
+-oo <-> 38 <-> 45 <-> 54 <-> 92 <-> +oo
 ============================
-The node at rank 1 is: "33"
-The node at rank 3 is: "72"
+The node at rank 3 is: "54"
+The node at rank 4 is: "92"

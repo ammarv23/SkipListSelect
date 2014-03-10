@@ -522,8 +522,8 @@ public class SkipList {
 		if (b == 121){
 			helperPrintVal = true;
 		}
-		int inserts = 10;		//number of inserted values
-		int deletions = 5;	//number of deletions
+		int inserts = 5;		//number of inserted values
+		int deletions = 1;	//number of deletions
 		int ranksDivider = 2;	// divider for ranks to ensure we don't ask for more ranks than we have nodes but still allows for variable ranks. There will always be at least 1
 		int x;
 
@@ -531,8 +531,9 @@ public class SkipList {
 			x = (ranksDivider % (inserts - deletions)) + 1;
 		}else x = ranksDivider;
 		
-		System.out.println("Creating SkipList with " + inserts + " insertions, " + deletions + " deletions and "
+		System.out.println("\nCreating SkipList with " + inserts + " insertions, " + deletions + " deletions and "
 					+ x + " ranks.");
+		System.out.println("================================");
 
 		SkipList s = new SkipList();
 
