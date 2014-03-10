@@ -1,0 +1,45 @@
+Name: Ammar Vahanvaty
+Student Number: 66023060
+
+1) Of a skip list of n elements, the highest level a node can be, will be log n. It is the largest level that can still maintain a balanced skip list while remaining at a good time efficiency.
+
+2) Each node in an ideal skip list does not have an equal probability of appearing at a specific level. Instead, the probability lies in a logarithmic distribution, where the probablity of encountering a specific node
+	decreases by a factor of 2 as the levels increase, so the probability of encountering a node h is, in fact 1/2^h-1. (Example, the probablity of finding node h in level 2 in a list is 1/2). This is not exact as the method
+	that determines if a node increases in level upon insertion is random, but the randomization has a probability of 50% so we can be approximately confident that this calculation will hold as the list increases in size.
+	
+3)	- Begin with pointer at the top left (level 4).
+	- Pointer follows from beggining to end, end is > 50.
+	- Pointer moves down from beggining level 4 to beginning level 3.
+	- Pointer follows from beginning to 19, 19 is < 50.
+	- Pointer follows from 19 to 32, 32 is < 50.
+	- Pointer follows from 32 to 71, 71 is > 50.
+	- Pointer moves down from 32 level 3 to 32 level 2.
+	- Pointer follows from 32 to 33, 33 is < 50.
+	- Pointer follows from 33 to 54, 54 is > 50.
+	- Pointer moves down from 33 level 3 to 33 level 2.
+	- Pointer follows from 33 to 36, 36 < 50.
+	- Pointer follows from 36 to 40, 40 < 50.
+	- Pointer follows from 40 to 50, 50 = 50, Pointer at destination.
+	
+	
+5) This assignment took me ~ 7 Hours to complete.
+
+README!!!!
+
+In order to test my step by step calculation of ranks as the program runs, set the boolean value "helperPrintVal" in the SkipList.java class to true, this will enable printouts
+of the right and left pointer ranks for each node affected by any particular insertion or deletion. As well as a printout of the Skip List at each insertion and deletion for
+easy following.
+
+I didn't realize we had to unzip the .jar file to access the files within, so I implemented the SkipList from a tutorial I found online at :
+
+http://www.mathcs.emory.edu/~cheung/Courses/323/Syllabus/Map/skip-list-impl.html#newlayer
+
+I still completed the assignment fully, but I had an extra class to accomodate the printouts, as the tutorial allowed both vertical and horizontal and I liked the ease of use.
+
+Due to the lack of SkipListTest.java, I implemented all my tests directly into the main class of SkipList.java.
+
+I have used randomized values for the inputs as well as the choice of ranks, so duplicating tests might be difficult, but as I feel my implementation is correct, this gives the
+best range of tests as it covers all possibilities.
+
+
+
